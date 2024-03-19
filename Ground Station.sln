@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ground Station", "Ground Station\Ground Station.csproj", "{DCD700DB-63F1-4856-AD89-0DBE9BDFBE1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCD700DB-63F1-4856-AD89-0DBE9BDFBE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD700DB-63F1-4856-AD89-0DBE9BDFBE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD700DB-63F1-4856-AD89-0DBE9BDFBE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD700DB-63F1-4856-AD89-0DBE9BDFBE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1995556E-1A61-4EC2-BED0-E3713E18B927}
+	EndGlobalSection
+EndGlobal
