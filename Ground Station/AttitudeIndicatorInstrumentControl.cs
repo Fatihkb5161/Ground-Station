@@ -28,9 +28,9 @@ namespace AvionicsInstrumentControlDemo
 		double RollAngle = 0; // Theta
 
         // Images
-        Bitmap bmpCadran = new Bitmap(@"C:\Users\mefat\OneDrive\Masaüstü\AkdoganYerIstasyonu/Resources/Horizon_Background.bmp");
-        Bitmap bmpBoule  = new Bitmap(@"C:\Users\mefat\OneDrive\Masaüstü\AkdoganYerIstasyonu/Resources/Horizon_GroundSky.bmp");
-        Bitmap bmpAvion  = new Bitmap(@"C:\Users\mefat\OneDrive\Masaüstü\AkdoganYerIstasyonu/Resources/Maquette_Avion.bmp");
+        Bitmap bmpCadran = new Bitmap(@"C:\Users\mefat\OneDrive\Masaüstü\AkdoganYerIstasyonu\Resources\Horizon_Background.bmp");
+        Bitmap bmpBoule  = new Bitmap(@"C:\Users\mefat\OneDrive\Masaüstü\AkdoganYerIstasyonu\Resources\Horizon_GroundSky.bmp");
+        Bitmap bmpAvion  = new Bitmap(@"C:\Users\mefat\OneDrive\Masaüstü\AkdoganYerIstasyonu\Resources\Maquette_Avion.bmp");
 
         #endregion
 

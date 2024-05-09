@@ -28,22 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel41 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.gpsNumberLbl = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.altimeter = new AvionicsInstrumentControlDemo.AltimeterInstrumentControl();
-            this.attitude = new AvionicsInstrumentControlDemo.AttitudeIndicatorInstrumentControl();
-            this.headingControl = new AvionicsInstrumentControlDemo.HeadingIndicatorInstrumentControl();
-            this.turnControl = new AvionicsInstrumentControlDemo.TurnCoordinatorInstrumentControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -80,6 +74,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.manuelBtn = new System.Windows.Forms.Button();
             this.HedefAltTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.HedefLatTxt = new System.Windows.Forms.TextBox();
@@ -90,11 +85,17 @@
             this.EveDonBtn = new System.Windows.Forms.Button();
             this.HedefLonTxt = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.basincChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.sicaklikChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.map = new GMap.NET.WindowsForms.GMapControl();
-            this.label9 = new System.Windows.Forms.Label();
+            this.messageTimer = new System.Windows.Forms.Timer(this.components);
+            this.altimeter = new AvionicsInstrumentControlDemo.AltimeterInstrumentControl();
+            this.attitude = new AvionicsInstrumentControlDemo.AttitudeIndicatorInstrumentControl();
+            this.headingControl = new AvionicsInstrumentControlDemo.HeadingIndicatorInstrumentControl();
+            this.turnControl = new AvionicsInstrumentControlDemo.TurnCoordinatorInstrumentControl();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ucusSnLbl = new System.Windows.Forms.Label();
             this.panel41.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -104,13 +105,11 @@
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.basincChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sicaklikChart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel41
             // 
-            this.panel41.Controls.Add(this.label9);
+            this.panel41.Controls.Add(this.tabControl1);
             this.panel41.Controls.Add(this.groupBox4);
             this.panel41.Controls.Add(this.pictureBox2);
             this.panel41.Controls.Add(this.pictureBox1);
@@ -118,8 +117,6 @@
             this.panel41.Controls.Add(this.groupBox2);
             this.panel41.Controls.Add(this.groupBox6);
             this.panel41.Controls.Add(this.groupBox1);
-            this.panel41.Controls.Add(this.basincChart);
-            this.panel41.Controls.Add(this.sicaklikChart);
             this.panel41.Controls.Add(this.map);
             this.panel41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel41.Location = new System.Drawing.Point(0, 0);
@@ -127,12 +124,66 @@
             this.panel41.Size = new System.Drawing.Size(1924, 1055);
             this.panel41.TabIndex = 45;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 501);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(351, 464);
+            this.tabControl1.TabIndex = 56;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.tabPage1.Controls.Add(this.ucusSnLbl);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.gpsNumberLbl);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(343, 435);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Uçuş Öncesi";
+            // 
+            // gpsNumberLbl
+            // 
+            this.gpsNumberLbl.AutoSize = true;
+            this.gpsNumberLbl.ForeColor = System.Drawing.Color.Red;
+            this.gpsNumberLbl.Location = new System.Drawing.Point(189, 36);
+            this.gpsNumberLbl.Name = "gpsNumberLbl";
+            this.gpsNumberLbl.Size = new System.Drawing.Size(41, 16);
+            this.gpsNumberLbl.TabIndex = 1;
+            this.gpsNumberLbl.Text = "0 >= 3";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label9.Location = new System.Drawing.Point(26, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Verify GPS:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(343, 435);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.groupBox4.Controls.Add(this.tableLayoutPanel1);
             this.groupBox4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox4.Location = new System.Drawing.Point(396, 15);
+            this.groupBox4.Location = new System.Drawing.Point(466, 15);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(900, 235);
             this.groupBox4.TabIndex = 55;
@@ -158,42 +209,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(894, 214);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // altimeter
-            // 
-            this.altimeter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.altimeter.Location = new System.Drawing.Point(3, 3);
-            this.altimeter.Name = "altimeter";
-            this.altimeter.Size = new System.Drawing.Size(217, 208);
-            this.altimeter.TabIndex = 0;
-            this.altimeter.Text = "altimeterInstrumentControl1";
-            // 
-            // attitude
-            // 
-            this.attitude.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.attitude.Location = new System.Drawing.Point(226, 3);
-            this.attitude.Name = "attitude";
-            this.attitude.Size = new System.Drawing.Size(217, 208);
-            this.attitude.TabIndex = 1;
-            this.attitude.Text = "attitudeIndicatorInstrumentControl1";
-            // 
-            // headingControl
-            // 
-            this.headingControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.headingControl.Location = new System.Drawing.Point(449, 3);
-            this.headingControl.Name = "headingControl";
-            this.headingControl.Size = new System.Drawing.Size(217, 208);
-            this.headingControl.TabIndex = 2;
-            this.headingControl.Text = "headingIndicatorInstrumentControl1";
-            // 
-            // turnControl
-            // 
-            this.turnControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.turnControl.Location = new System.Drawing.Point(672, 3);
-            this.turnControl.Name = "turnControl";
-            this.turnControl.Size = new System.Drawing.Size(219, 208);
-            this.turnControl.TabIndex = 3;
-            this.turnControl.Text = "turnCoordinatorInstrumentControl1";
             // 
             // pictureBox2
             // 
@@ -509,9 +524,9 @@
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
             this.groupBox2.Controls.Add(this.checkedListBox1);
             this.groupBox2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox2.Location = new System.Drawing.Point(1655, 523);
+            this.groupBox2.Location = new System.Drawing.Point(1388, 492);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(221, 167);
+            this.groupBox2.Size = new System.Drawing.Size(488, 186);
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Akıllı Saat Bilgisi";
@@ -522,12 +537,9 @@
             this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBox1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "YARDIM 35,42 43,23 12.48",
-            "İMHA 42,23 35,72 13.45"});
             this.checkedListBox1.Location = new System.Drawing.Point(3, 18);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(215, 146);
+            this.checkedListBox1.Size = new System.Drawing.Size(482, 165);
             this.checkedListBox1.TabIndex = 0;
             // 
             // groupBox6
@@ -542,7 +554,7 @@
             this.groupBox6.Controls.Add(this.label36);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox6.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox6.Location = new System.Drawing.Point(1388, 523);
+            this.groupBox6.Location = new System.Drawing.Point(1626, 319);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(250, 167);
             this.groupBox6.TabIndex = 21;
@@ -625,6 +637,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
+            this.groupBox1.Controls.Add(this.manuelBtn);
             this.groupBox1.Controls.Add(this.HedefAltTxt);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.HedefLatTxt);
@@ -643,9 +656,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kontrol Merkezi";
             // 
+            // manuelBtn
+            // 
+            this.manuelBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.manuelBtn.Location = new System.Drawing.Point(177, 195);
+            this.manuelBtn.Name = "manuelBtn";
+            this.manuelBtn.Size = new System.Drawing.Size(136, 33);
+            this.manuelBtn.TabIndex = 36;
+            this.manuelBtn.Text = "Manuel";
+            this.manuelBtn.UseVisualStyleBackColor = true;
+            this.manuelBtn.Click += new System.EventHandler(this.manuelBtn_Click);
+            // 
             // HedefAltTxt
             // 
-            this.HedefAltTxt.Location = new System.Drawing.Point(332, 94);
+            this.HedefAltTxt.Location = new System.Drawing.Point(332, 75);
             this.HedefAltTxt.Name = "HedefAltTxt";
             this.HedefAltTxt.Size = new System.Drawing.Size(146, 22);
             this.HedefAltTxt.TabIndex = 35;
@@ -656,7 +680,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label4.Location = new System.Drawing.Point(328, 71);
+            this.label4.Location = new System.Drawing.Point(328, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 34;
@@ -665,7 +689,7 @@
             // HedefLatTxt
             // 
             this.HedefLatTxt.ForeColor = System.Drawing.Color.Black;
-            this.HedefLatTxt.Location = new System.Drawing.Point(15, 94);
+            this.HedefLatTxt.Location = new System.Drawing.Point(15, 75);
             this.HedefLatTxt.Name = "HedefLatTxt";
             this.HedefLatTxt.Size = new System.Drawing.Size(146, 22);
             this.HedefLatTxt.TabIndex = 31;
@@ -676,7 +700,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label15.Location = new System.Drawing.Point(11, 71);
+            this.label15.Location = new System.Drawing.Point(11, 52);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(74, 20);
             this.label15.TabIndex = 30;
@@ -687,7 +711,7 @@
             this.InisBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.InisBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.InisBtn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.InisBtn.Location = new System.Drawing.Point(272, 167);
+            this.InisBtn.Location = new System.Drawing.Point(266, 129);
             this.InisBtn.Name = "InisBtn";
             this.InisBtn.Size = new System.Drawing.Size(88, 47);
             this.InisBtn.TabIndex = 2;
@@ -700,7 +724,7 @@
             this.DurBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DurBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.DurBtn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.DurBtn.Location = new System.Drawing.Point(153, 167);
+            this.DurBtn.Location = new System.Drawing.Point(147, 129);
             this.DurBtn.Name = "DurBtn";
             this.DurBtn.Size = new System.Drawing.Size(97, 47);
             this.DurBtn.TabIndex = 3;
@@ -713,7 +737,7 @@
             this.GitBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.GitBtn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.GitBtn.Location = new System.Drawing.Point(380, 167);
+            this.GitBtn.Location = new System.Drawing.Point(374, 129);
             this.GitBtn.Name = "GitBtn";
             this.GitBtn.Size = new System.Drawing.Size(89, 47);
             this.GitBtn.TabIndex = 4;
@@ -726,17 +750,17 @@
             this.EveDonBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.EveDonBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.EveDonBtn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.EveDonBtn.Location = new System.Drawing.Point(30, 167);
+            this.EveDonBtn.Location = new System.Drawing.Point(24, 129);
             this.EveDonBtn.Name = "EveDonBtn";
             this.EveDonBtn.Size = new System.Drawing.Size(90, 47);
             this.EveDonBtn.TabIndex = 1;
-            this.EveDonBtn.Text = "EVE DÖN";
+            this.EveDonBtn.Text = "Eve Dön";
             this.EveDonBtn.UseVisualStyleBackColor = false;
             this.EveDonBtn.Click += new System.EventHandler(this.EveDonBtn_Click);
             // 
             // HedefLonTxt
             // 
-            this.HedefLonTxt.Location = new System.Drawing.Point(167, 94);
+            this.HedefLonTxt.Location = new System.Drawing.Point(167, 75);
             this.HedefLonTxt.Name = "HedefLonTxt";
             this.HedefLonTxt.Size = new System.Drawing.Size(146, 22);
             this.HedefLonTxt.TabIndex = 33;
@@ -747,61 +771,11 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label16.Location = new System.Drawing.Point(163, 71);
+            this.label16.Location = new System.Drawing.Point(163, 52);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(92, 20);
             this.label16.TabIndex = 32;
             this.label16.Text = "Longtitude:";
-            // 
-            // basincChart
-            // 
-            this.basincChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            chartArea1.Name = "ChartArea1";
-            this.basincChart.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.ForeColor = System.Drawing.Color.DarkGray;
-            legend1.Name = "Legend1";
-            legend1.Title = "İHA Basınç";
-            this.basincChart.Legends.Add(legend1);
-            this.basincChart.Location = new System.Drawing.Point(12, 730);
-            this.basincChart.Name = "basincChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.basincChart.Series.Add(series1);
-            this.basincChart.Size = new System.Drawing.Size(351, 235);
-            this.basincChart.TabIndex = 47;
-            this.basincChart.Text = "chart2";
-            title1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            title1.Name = "Title1";
-            title1.Text = "İHA Basınç";
-            this.basincChart.Titles.Add(title1);
-            // 
-            // sicaklikChart
-            // 
-            this.sicaklikChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(32)))), ((int)(((byte)(58)))));
-            chartArea2.Name = "ChartArea1";
-            this.sicaklikChart.ChartAreas.Add(chartArea2);
-            legend2.Enabled = false;
-            legend2.Name = "Legend1";
-            legend2.Title = "İHA Sıcaklık";
-            this.sicaklikChart.Legends.Add(legend2);
-            this.sicaklikChart.Location = new System.Drawing.Point(12, 489);
-            this.sicaklikChart.Name = "sicaklikChart";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.sicaklikChart.Series.Add(series2);
-            this.sicaklikChart.Size = new System.Drawing.Size(351, 235);
-            this.sicaklikChart.TabIndex = 46;
-            title2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            title2.Name = "Title1";
-            title2.Text = "İHA Sıcaklık";
-            this.sicaklikChart.Titles.Add(title2);
             // 
             // map
             // 
@@ -830,15 +804,66 @@
             this.map.TabIndex = 54;
             this.map.Zoom = 0D;
             // 
-            // label9
+            // messageTimer
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(484, 316);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 20);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Paket No:";
+            this.messageTimer.Interval = 1000;
+            this.messageTimer.Tick += new System.EventHandler(this.messageTimer_Tick);
+            // 
+            // altimeter
+            // 
+            this.altimeter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.altimeter.Location = new System.Drawing.Point(3, 3);
+            this.altimeter.Name = "altimeter";
+            this.altimeter.Size = new System.Drawing.Size(217, 208);
+            this.altimeter.TabIndex = 0;
+            this.altimeter.Text = "altimeterInstrumentControl1";
+            // 
+            // attitude
+            // 
+            this.attitude.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.attitude.Location = new System.Drawing.Point(226, 3);
+            this.attitude.Name = "attitude";
+            this.attitude.Size = new System.Drawing.Size(217, 208);
+            this.attitude.TabIndex = 1;
+            this.attitude.Text = "attitudeIndicatorInstrumentControl1";
+            // 
+            // headingControl
+            // 
+            this.headingControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.headingControl.Location = new System.Drawing.Point(449, 3);
+            this.headingControl.Name = "headingControl";
+            this.headingControl.Size = new System.Drawing.Size(217, 208);
+            this.headingControl.TabIndex = 2;
+            this.headingControl.Text = "headingIndicatorInstrumentControl1";
+            // 
+            // turnControl
+            // 
+            this.turnControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.turnControl.Location = new System.Drawing.Point(672, 3);
+            this.turnControl.Name = "turnControl";
+            this.turnControl.Size = new System.Drawing.Size(219, 208);
+            this.turnControl.TabIndex = 3;
+            this.turnControl.Text = "turnCoordinatorInstrumentControl1";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label10.Location = new System.Drawing.Point(26, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(117, 16);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Uçuşa Kalan Süre:";
+            // 
+            // ucusSnLbl
+            // 
+            this.ucusSnLbl.AutoSize = true;
+            this.ucusSnLbl.ForeColor = System.Drawing.Color.Red;
+            this.ucusSnLbl.Location = new System.Drawing.Point(189, 70);
+            this.ucusSnLbl.Name = "ucusSnLbl";
+            this.ucusSnLbl.Size = new System.Drawing.Size(21, 16);
+            this.ucusSnLbl.TabIndex = 3;
+            this.ucusSnLbl.Text = "10";
             // 
             // Form1
             // 
@@ -851,7 +876,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel41.ResumeLayout(false);
-            this.panel41.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -865,8 +892,6 @@
             this.groupBox6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.basincChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sicaklikChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -891,8 +916,6 @@
         private System.Windows.Forms.Button EveDonBtn;
         private System.Windows.Forms.TextBox HedefLonTxt;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataVisualization.Charting.Chart basincChart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart sicaklikChart;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -928,7 +951,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox HedefAltTxt;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label gpsNumberLbl;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Timer messageTimer;
+        private System.Windows.Forms.Button manuelBtn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label ucusSnLbl;
     }
 }
 
